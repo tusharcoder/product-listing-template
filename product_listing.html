@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listing</title>
+        <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css">
+        <style>
+        body{
+            font-family: Verdana, sans-serif;
+        }
+            nav, .div-hidden-filter{
+             background-color: #0099CC;
+             padding: 20px 0px 20px 20px;   
+             border: solid 1px #0099CC;
+             border-radius:10px;    
+             color: white; 
+            }
+            nav ul, .div-hidden-filter ul{
+                display: inline;
+                margin-top: 5px;
+                padding-left: 0px;
+            }
+                nav ul:last-of-type{
+                    float: right; 
+                }
+
+            nav li, .div-hidden-filter li{
+                display: inline;
+                padding: 25px 20px 25px;
+                border-radius:10px;
+            }
+
+            .div-hidden-filter li{
+                padding:5px;
+            }
+
+                nav li:last-of-type{
+                    margin-right:0; 
+                }
+                nav li:hover{
+                    background-color: #089de3
+                }
+            nav li a, .div-hidden-filter li a{
+                text-decoration: none;
+                color: white;
+            }
+            .div-hidden-filter{
+                margin-bottom:10px;
+                padding:5px;
+                display: none;  
+                text-align: center;
+            }
+            .button-clear-price-sort{
+                margin-left: 3px;
+                color: white;
+                background-color: #0099CC;
+                border:none;
+            }
+                .button-clear-price-sort:hover{
+                    background-color: #089de3;
+                }
+            nav .logo{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            header{
+                text-align: center;
+                font-size: 30px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 50px;
+                background: #eaeff2;
+                border-radius: 10px;
+            }
+            aside{
+                width:25vw;
+                border: 1px solid #0099CC;
+                border-radius: 10px;
+                background-color: #0099CC;
+                color: white;
+                display: inline-block;
+            }
+            aside h3{
+                text-align: center;
+            }
+            aside ul{
+                padding:0; 
+            }
+            aside li{
+                display: block;
+                padding: 20px;
+                margin-left: 0;
+                border-bottom: 0.5px solid darkgray;
+            }
+                aside li:last-of-type{
+                    border-bottom: none;
+                    padding-bottom: 10px;
+                }
+                aside li:first-of-type{
+                    border-top: 0.5px solid darkgray;
+                }
+            #li-filter div{
+                padding: 5px 5px 4px 5px; 
+            }
+
+            main{
+                width: 70vw;
+                float: right;
+                display: inline-block;
+                text-align: left;
+            }
+
+
+            .div-packagecard{
+            width: 14.06em;
+            display: inline-block;      
+            margin-bottom: 0.93em;
+            margin-right: 0.43em;
+            border:1px solid #0099CC;
+            border-radius:10px;
+            }
+
+            .div-packagecard > .featured-image{
+                text-align: center;
+            }
+
+            .div-packagecard > .featured-image img{
+                width: 14.06em;
+                height: 14.06em;
+            }
+
+            .div-packagecard > .action{
+                background-color:  #0099CC;
+                padding: 0.62em 0px;
+                border-radius:0.62em;
+            }
+            .div-packagecard > .action a{
+                text-decoration: none;
+                padding: 0.62em 1.56em;
+                color: white;
+                border-radius:0.62em;
+            }
+                .div-packagecard > .action a:last-of-type{
+                    padding-left: 1.56em;
+                    padding-right: 2.06em;
+                    
+                 }
+                .div-packagecard > .action a:hover{
+                    background-color:#089de3 ;
+                 }
+            
+            @media (max-width:1358px){
+                .div-packagecard{
+                    margin-right: 10px;
+                    width: 13.06em;
+                }
+
+                .div-packagecard > .featured-image > img{
+                    width: 13.06em;
+                    height: 13.06em;
+                }
+
+                    .div-packagecard > .action a:last-of-type{
+                        padding-right: 1.22em;
+                    
+                 }
+
+                main{
+                    text-align: center;
+                 }
+            }
+
+            @media (max-width:1287px){
+                .div-packagecard{
+                    width: 13em;
+                }
+                   .div-packagecard > .featured-image > img{
+                    width: 13em;
+                    height: 13em;
+                    border-radius:10px; 
+                }
+                    .div-packagecard > .action a:last-of-type{
+                        padding-right: 1.16em;
+                    
+                 }
+            }
+
+            @media (max-width:959px){
+                aside{
+                    display: none;
+                }
+                .div-hidden-filter{
+                    display: block;
+                }
+                main{
+                    width: 95vw;
+                }
+                
+                header{
+                    padding: 20px;
+                    font-size: 20px;
+                }
+            }
+
+            @media (max-width:697px){
+                nav > ul:last-of-type{
+                    display: none;
+                }
+                nav{
+                    text-align: center;
+                }
+                nav > .logo{
+                    float: left;
+                    margin-top: -5px;
+                }
+            }
+
+            @media (max-width:501px){
+                nav > .logo{
+                    display: none;
+                }
+            }
+                
+        </style>
+    </head>
+<body>
+    <nav>
+        <span class="logo" >Adventuria</span>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sign Up</a></li>            
+        </ul>    
+    </nav>
+
+    <header>
+        Packages
+    </header>
+    <div class="div-hidden-filter">
+        <ul>
+            <li><label for="price">Sort By:-</label> 
+                <input type="radio" id="price" name="price"/> 
+                    <i class="fa fa-sort-amount-asc" aria-hidden="true">
+                        Price
+                    </i>
+                <input type="radio" id="price" name="price"/> 
+                <i class="fa fa-sort-amount-desc" aria-hidden="true"> 
+                    Price
+                </i>
+                <button class="button-clear-price-sort"><i class="fa fa-random" aria-hidden="true"></i></button> 
+            </li>
+        </ul>
+    </div>
+    <aside>
+        <h3>Filters</h3>
+        <ul>
+            <li id="li-filter">
+                <label for="price">Sort By:-</label>
+                <div><input type="radio" id="price" name="price"/> Price low to high</div>
+                <div><input type="radio" id="price" name="price"/> Price high to low </div>
+            </li>
+            <li>Category</li>
+            <li>Location</li>         
+        </ul>
+
+    </aside>
+    <main>
+<!--
+{% block content %}
+    <ul>
+        {% for package in packages %}
+            <li><a href='/web/package/{{package.pk}}'>{{ package.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}-->
+    <div class="div-packagecard">
+        <div class="featured-image">
+            <img src="media/dummy/image1.png">
+        </div>
+        <div class="action">
+            <a href="#">View</a>
+            <a href="#" class="fix-large-text">Buy Now</a>
+        </div>
+    </div>
+  <div class="div-packagecard">
+        <div class="featured-image">
+            <img src="media/dummy/image2.jpg">
+        </div>
+        <div class="action">
+            <a href="#">View</a>
+            <a href="#" class="fix-large-text">Buy Now</a>
+        </div>
+    </div>
+      <div class="div-packagecard">
+        <div class="featured-image">
+            <img src="media/dummy/image3.jpg">
+        </div>
+        <div class="action">
+            <a href="#">View</a>
+            <a href="#" class="fix-large-text">Buy Now</a>
+        </div>
+    </div>
+      <div class="div-packagecard">
+        <div class="featured-image">
+            <img src="media/dummy/image4.jpg">
+        </div>
+        <div class="action">
+            <a href="#">View</a>
+            <a href="#" class="fix-large-text">Buy Now</a>
+        </div>
+    </div>
+    <div class="div-packagecard">
+        <div class="featured-image">
+            <img src="media/dummy/image5.jpg">
+        </div>
+        <div class="action">
+            <a href="#">View</a>
+            <a href="#" class="fix-large-text">Buy Now</a>
+        </div>
+    </div>
+    <div class="div-packagecard">
+        <div class="featured-image">
+            <img src="media/dummy/image6.jpg">
+        </div>
+        <div class="action">
+            <a href="#">View</a>
+            <a href="#" class="fix-large-text">Buy Now</a>
+        </div>
+    </div>
+    <div class="div-packagecard">
+        <div class="featured-image">
+            <img src="media/dummy/image7.jpg">
+        </div>
+        <div class="action">
+            <a href="#">View</a>
+            <a href="#" class="fix-large-text">Buy Now</a>
+        </div>
+    </div>
+    <div class="div-packagecard">
+        <div class="featured-image">
+            <img src="media/dummy/image8.jpg">
+        </div>
+        <div class="action">
+            <a href="#">View</a>
+            <a href="#" class="fix-large-text">Buy Now</a>
+        </div>
+    </div>
+    </main>
+</body>
+</html>
